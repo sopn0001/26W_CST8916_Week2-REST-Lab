@@ -46,3 +46,55 @@ Content-Type: application/json
 
 # DELETE a user by ID
 DELETE http://localhost:8000/users/1
+
+
+###
+
+# GET all tasks
+GET http://localhost:8000/tasks
+Accept: application/json
+
+###
+
+# GET a specific task by ID
+GET http://localhost:8000/tasks/1
+Accept: application/json
+
+###
+
+# POST create a new task
+POST http://localhost:8000/tasks
+Content-Type: application/json
+
+{
+  "title": "Complete assignment",
+  "description": "Finish the REST API lab assignment",
+  "user_id": 3,
+  "completed": false
+}
+
+###
+
+# PUT update a task by ID
+PUT http://localhost:8000/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Complete assignment updated",
+  "description": "Finish the REST API lab assignment updated",
+  "user_id": 1,
+  "completed": true
+}
+
+###
+
+# DELETE a task by ID
+DELETE http://localhost:8000/tasks/3
+
+###
+
+# GET all tasks for a specific user by user ID
+GET http://localhost:8000/users/1/tasks
+Accept: application/json
+
+###
