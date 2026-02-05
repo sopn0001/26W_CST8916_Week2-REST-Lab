@@ -1,4 +1,4 @@
-# CST8915 Lab 1: Algonquin Pet Store on Azure VM
+# CST8916 Assignment 1
 
 **Student Name**: IDRIS JOVIAL SOP NWABO
 
