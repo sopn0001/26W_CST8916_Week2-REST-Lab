@@ -1,29 +1,31 @@
 # GET root URL
-GET http://localhost:8000/
+
+
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/
 Accept: text/plain
 
 ###
 
 # GET health check
-GET http://localhost:8000/health
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/health
 Accept: application/json
 
 ###
 
 # GET all users
-GET http://localhost:8000/users
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/users
 Accept: application/json
 
 ###
 
 # GET a specific user by ID
-GET http://localhost:8000/users/1
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/users/1
 Accept: application/json
 
 ###
 
 # POST create a new user
-POST http://localhost:8000/users
+POST https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/users
 Content-Type: application/json
 
 {
@@ -34,7 +36,7 @@ Content-Type: application/json
 ###
 
 # PUT update a user by ID
-PUT http://localhost:8000/users/1
+PUT https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/users/1
 Content-Type: application/json
 
 {
@@ -45,38 +47,69 @@ Content-Type: application/json
 ###
 
 # DELETE a user by ID
-DELETE http://localhost:8000/users/1
+DELETE https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/users/1
 
 
 ###
 
 # GET all tasks
-GET http://localhost:8000/tasks
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks
 Accept: application/json
 
 ###
 
 # GET a specific task by ID
-GET http://localhost:8000/tasks/1
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks/1
+Accept: application/json
+
+###
+
+# GET a task that does not exist
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks/5
 Accept: application/json
 
 ###
 
 # POST create a new task
-POST http://localhost:8000/tasks
+POST https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks
 Content-Type: application/json
 
 {
   "title": "Complete assignment",
   "description": "Finish the REST API lab assignment",
-  "user_id": 3,
+  "user_id": 2,
+  "completed": false
+}
+
+###
+
+# POST create a new task with missing title
+POST https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks
+Content-Type: application/json
+
+{
+  "description": "Finish the REST API lab assignment",
+  "user_id": 2,
+  "completed": false
+}
+
+###
+
+# POST create a new task with invalid user_id
+POST https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks
+Content-Type: application/json
+
+{
+  "title": "Complete assignment",
+  "description": "Finish the REST API lab assignment",
+  "user_id": 8,
   "completed": false
 }
 
 ###
 
 # PUT update a task by ID
-PUT http://localhost:8000/tasks/1
+PUT https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks/2
 Content-Type: application/json
 
 {
@@ -89,12 +122,12 @@ Content-Type: application/json
 ###
 
 # DELETE a task by ID
-DELETE http://localhost:8000/tasks/3
+DELETE https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/tasks/3
 
 ###
 
 # GET all tasks for a specific user by user ID
-GET http://localhost:8000/users/1/tasks
+GET https://cst8916-assignment-bcb9hye7b4bsa5hw.canadacentral-01.azurewebsites.net/users/1/tasks
 Accept: application/json
 
 ###
